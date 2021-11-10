@@ -3,7 +3,6 @@
 # define MAX_FD 256
 # include <unistd.h>
 # include <stdlib.h>
-# define BUFFER_SIZE 1
 
 char	*get_next_line(int fd);
 char	*ft_substr(char const *s, size_t start, size_t len);

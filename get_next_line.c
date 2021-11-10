@@ -10,24 +10,6 @@ size_t ft_strichr(char *mem)
 	return (i);
 }
 
-void	*ft_calloc(size_t nmemb, size_t size)
-{
-	unsigned char	*ptr;
-	unsigned int i;
-
-	i = 0;
-	ptr = malloc(nmemb * size);
-	if (ptr == 0)
-		return (0);
-	while (nmemb > i)
-	{
-		ptr[i] = 'g';
-		i++;
-	}
-	ptr[i] = '\0';
-	return (ptr);
-}
-
 char *find_line(char **buffer, char *read_result, int fd)
 {
 	int read_bytes;
@@ -56,8 +38,7 @@ char *find_line(char **buffer, char *read_result, int fd)
 	}
 	free(*buffer);
 	*buffer = ft_substr(mem, ft_strichr(mem) + 1, ft_strlen(mem) - ft_strichr(mem));
-	free(mem);
-	return (ft_substr(mem, 0, ft_strichr(mem) + 1));
+	return (mem);
 }
 
 char	*get_next_line(int fd)
@@ -65,12 +46,20 @@ char	*get_next_line(int fd)
 	static char *buffer;
 	char *read_result;
 	char *line;
+	int i;
 
+	i = 0;
 	if (fd < 0 || BUFFER_SIZE <= 0 || fd > 256)
 		return (NULL);
 	if (!buffer)
 		buffer = NULL;
-	read_result = ft_calloc(BUFFER_SIZE + 1, 1);
+	read_result = malloc(sizeof(char) * BUFFER_SIZE + 1);
+	while (i < BUFFER_SIZE)
+	{
+		read_result[i] = 'a';
+		i++;
+	}
+	read_result[i] = '\0';
 	if (!read_result)
 		return (0);
 	line = find_line(&buffer, read_result, fd);
