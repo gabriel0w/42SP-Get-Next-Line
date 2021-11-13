@@ -55,7 +55,7 @@ char	*find_line(char **buf, char *read_result, int fd, int read_bytes)
 
 char	*get_next_line(int fd)
 {
-	static char	*buf[fd];
+	static char	*buf[256];
 	char		*read_result;
 	char		*line;
 	int			read_bytes;
