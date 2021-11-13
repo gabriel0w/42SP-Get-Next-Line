@@ -55,7 +55,7 @@ char	*find_line(char **buf, char *read_result, int fd, int read_bytes)
 
 char	*get_next_line(int fd)
 {
-	static char	*buf;
+	static char	*buf[256];
 	char		*read_result;
 	char		*line;
 	int			read_bytes;
@@ -66,7 +66,7 @@ char	*get_next_line(int fd)
 	read_result = malloc(sizeof(char) * BUFFER_SIZE + 1);
 	if (!read_result)
 		return (NULL);
-	line = find_line(&buf, read_result, fd, read_bytes);
+	line = find_line(&buf[fd], read_result, fd, read_bytes);
 	free(read_result);
 	return (line);
 }
