@@ -1,5 +1,17 @@
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_next_line_bonus.h                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gbelo-so <gbelo-so@student.42sp.org.br>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/13 16:16:12 by gbelo-so          #+#    #+#             */
+/*   Updated: 2021/11/13 16:16:12 by gbelo-so         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef GET_NEXT_LINE_BONUS_H
+# define GET_NEXT_LINE_BONUS_H
 # define MAX_FD 256
 # include <unistd.h>
 # include <stdlib.h>
