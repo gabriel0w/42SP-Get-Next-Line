@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gbelo-so <gbelo-so@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gbelo <gbelo-so@student.42sp.org.br>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 16:18:24 by gbelo-so          #+#    #+#             */
-/*   Updated: 2021/11/13 16:18:24 by gbelo-so         ###   ########.fr       */
+/*   Updated: 2021/11/14 22:08:40 by gbelo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line_bonus.h"
+#include "get_next_line.h"
 
 char	*ft_substr(char const *s, size_t start, size_t len)
 {
